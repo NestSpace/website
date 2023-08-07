@@ -11,8 +11,8 @@ class Avatar extends HTMLElement {
     avatarCSS.setAttribute("rel","stylesheet");
     avatarCSS.setAttribute("type","text/css");
     this.#shadow.appendChild(avatarCSS);
-    const img = document.createElement("img");
-    img.setAttribute("src", this.getAttribute("src"));
+    const img = document.createElement("object");
+    img.setAttribute("data", this.getAttribute("src"));
     this.#shadow.appendChild(img);
     this.#defineCallBacks();
     return;
