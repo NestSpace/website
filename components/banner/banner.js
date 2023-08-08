@@ -12,20 +12,15 @@ class Banner extends HTMLElement {
     bannerCSS.setAttribute("rel","stylesheet");
     bannerCSS.setAttribute("type","text/css");
     this.#shadow.appendChild(bannerCSS);
-
-    const header = document.createElement("div");
-    header.setAttribute("class", "bannerbg");
-    this.#shadow.appendChild(header);
-
-    const logo = document.createElement("img");
-    logo.setAttribute("src", new URL("logowhite.png", import.meta.url));
-    header.appendChild(logo);
-
+    const bannerHTML = await fetch(new URL("banner.html", import.meta.url));
+    this.#shadow.innerHTML += await bannerHTML.text();
     const title = document.createElement("p")
     title.setAttribute("class", "title");
     title.innerHTML = this.getAttribute("title");
-    header.appendChild(title);
-
+    const titleli = document.createElement("li");
+    titleli.setAttribute("class", "push");
+    titleli.appendChild(title);
+    this.#shadow.querySelector("ul").appendChild(titleli);
     this.#defineCallBacks();
     return;
   }
