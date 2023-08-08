@@ -1,4 +1,37 @@
 body{
     font-family: 'Atkinson Hyperlegible';
-    margin: 0
+}
+
+h1{
+    color:rgba(0,0,0,1);
+}
+
+h2{
+    color:rgba(0,0,0,1);
+}
+
+.photo{
+
+    height:auto;
+    width:500px;
+    aspect-ratio: 3 / 2; 
+    object-fit: cover;
+
+}
+
+.text-block {
+    background-color: rgba(119,76,255,1);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-right: 100px;
+    height: auto;
+    display: block;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+body {
+	background: rgba(221,163,255,1);
 }
