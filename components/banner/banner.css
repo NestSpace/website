@@ -3,14 +3,25 @@
 	background:rgba(119,76,255,1);
 	color: white;
 	font-size: 30px;
-	margin-left: auto;
-	margin-right: auto;
+	/*margin-left: auto;
+	margin-right: auto;*/
+    margin: 0;
+    border: 0;
+    padding: 0;
   }
 img {
 	display: inline;
 	margin-left: 5%;
 	margin-right: auto;
 	width: 30%;
+}
+.navlist {
+    margin: 0;
+    list-style-type: none;
+    display: flex
+}
+.push {
+    margin-left: auto
 }
 .title {
 	margin-right: 5%;
