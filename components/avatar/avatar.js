@@ -7,12 +7,12 @@ class Avatar extends HTMLElement {
   }
   async #render() {
     const avatarCSS = document.createElement("link");
-    avatarCSS.setAttribute("href","avatar.css");
+    avatarCSS.setAttribute("href", new URL("avatar.css", import.meta.url));
     avatarCSS.setAttribute("rel","stylesheet");
     avatarCSS.setAttribute("type","text/css");
     this.#shadow.appendChild(avatarCSS);
-    const img = document.createElement("img");
-    img.setAttribute("src", this.getAttribute("src"));
+    const img = document.createElement("object");
+    img.setAttribute("data", this.getAttribute("src"));
     this.#shadow.appendChild(img);
     this.#defineCallBacks();
     return;
