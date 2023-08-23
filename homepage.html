@@ -1,41 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NestSpace</title>
-  <link rel="stylesheet" href="homepage.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <header class="header">
-    <div class="purple-column">
-      <img src="nestspace_icon.jpg" alt="Company Icon" class="company-icon">
-      <h1>NestSpace</h1>
-    </div>
-  </header>
+  <div class="wrapper">
+    <header>
+      <img src="layer1.png" class="background">
+      <img src="layer2.png" class="background">
+      <img src="layer3.png" class="foreground" id="foreground">
+      <h1 class="title">Welcome to NestSpace!</h1>
+    </header>
+    <section>
+        <p>We aim to create a safe and comfortable nest for creativity! </p>
+        <p>A HKU Student Interested Group</p>
+        <p>We welcome everyone to join!</p>
+    </section>
 
-  <div class="background">
-    <div class="stars"></div>
-    <div class="welcome-message">
-      <h1>Welcome to NestSpace!</h1>
-      <p>Introduction text</p>
-    </div>
+    <section>
+        <div class="frame">
+            <a class="custom-link" href="team_member.html">
+            <img src="/pictures/signalboard_1.png" alt="Team Member">
+            </a>
+            <a class="custom-link" href="photo_gallery.html">
+            <img src="/pictures/signalboard_2.png" alt="Photo Gallery">
+            </a>
+            <a class="custom-link" href="recruitment_form.html">
+            <img src="/pictures/signalboard_3png" alt="Recruitment Form">
+            </a>
+            <a class="custom-link" href="projects.html">
+            <img src="/pictures/signalboard_4.png" alt="Projects">
+            </a>
+        </div>
+    </section>
+
+    <section>
+        <div class="poster">
+            <img src="/pictures/poster_example.jpeg" alt="Poster Example">
+        </div>
+        
+        <div class="useful-links">
+            <h2>Useful links</h2>
+            <p><a href="https://www.instagram.com/nestspace.hku/" target="_blank">Instagram</a></p>
+    </section>
+    
   </div>
-  
-  <div class="frame">
-    <button class="custom-btn btn-1">Team Member</button>
-    <button class="custom-btn btn-2">Photo Gallery</button>
-    <button class="custom-btn btn-3">Recruitment Form</button>
-    <button class="custom-btn btn-4">Project</button>
-  </div>
 
-  <div class="useful-links">
-    <h2>Useful links</h2>
-    <p>Instagram
-      <a href="https://www.instagram.com/nestspace.hku/" target="_blank"></a>
-    </p>
-
-  <script src="homepage.js"></script>
+  <script src="script.js"></script> 
 </body>
 </html>
