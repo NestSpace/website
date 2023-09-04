@@ -1,31 +1,68 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Example</title>
+        <title>Members</title>
         <link rel="stylesheet" href="members.css">
+        <link href='https://fonts.googleapis.com/css?family=Atkinson Hyperlegible' rel='stylesheet'>
     </head>
     <body>
-      <p style='font-size: 72px;
-  background: -webkit-linear-gradient(45deg, #efabcd, #009900);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;'>Nestspace</p>
-      <div style='height:100px; width: 100%'>
+    <my-banner title="Members"></my-banner>
+      <div style='height:100%; width: 80%; max-width: 1000px; margin: auto'>
+    <div class='left-button' onclick='
+        var elems = document.getElementsByClassName("animate-bubble-disappear");
+         if (elems.length > 0) {
+            elems[elems.length - 1].className = "animate-bubble-appear"
+         }
+        var elems = document.getElementsByClassName("animate-avatar-disappear");
+         if (elems.length > 0) {
+            elems[elems.length - 1].className = "animate-avatar-appear"
+         }
+        '>&LeftAngleBracket;</div>
+    <div class='right-button' onclick='
+         var elems = document.getElementsByClassName("animate-bubble-appear");
+         if (elems.length > 1) {
+            elems[0].className = "animate-bubble-disappear"
+         }
+         var elems = document.getElementsByClassName("animate-avatar-appear");
+         if (elems.length > 1) {
+            elems[0].className = "animate-avatar-disappear"
+         }
+        '>&RightAngleBracket;</div>
+      <div class='bubblescontainer' style='height:300px; width: 1000%'>
+        <div class='animate-bubble-appear' style='height: 100%; width: 0%; float: left'>
         <my-bubble>
-        <p>wassup</p>
+        <p>disintegaring</p>
         </my-bubble>
+        </div>
+        <div class='animate-bubble-appear' style='height: 100%; width: 10%; float: left'>
+        <my-bubble>
+        <p>bird</p>
+        </my-bubble>
+        </div>
+        <div class='animate-bubble-appear' style='height: 100%; width: 10%; float: left'>
+        <my-bubble>
+        <p>HELLO</p>
+        </my-bubble>
+        </div>
       </div>
       <div style='height:50px'></div>
-      <div style='height:100px; width: 50%; margin: auto'>
+      <div class='avatarscontainer' style='height:100px; width: 80%; margin: auto'>
+        <div class='animate-avatar-appear' style='height:100px; width:100px; float: left'>
         <my-avatar 
-          src="https://media.tenor.com/-wrmUJrUbeoAAAAC/emoji-disintergrating.gif" 
+          src="https://media.tenor.com/nYdAr6rffx0AAAAC/an-emoji-disintegrating-in-pain.gif" 
         ></my-avatar>
+        </div>
+        <div class='animate-avatar-appear' style='height:100px; width:100px; float:left'>
         <my-avatar 
           src="https://i.kym-cdn.com/entries/icons/original/000/037/410/coverbird.jpg" 
         ></my-avatar>
+        </div>
+        <div class='animate-avatar-appear' style='height:100px; width:100px; float:left'>
         <my-avatar 
           src="https://www.southcoasttoday.com/gcdn/authoring/2012/10/17/NSTT/ghows-NB-6b3997ec-933b-481d-80a2-074a87a5d45a-9aabacc5.jpeg?width=1200&disable=upscale&format=pjpg&auto=webp" 
         ></my-avatar>
+        </div>
+      </div>
       </div>
     </body>
   <script type="module">
@@ -33,6 +70,8 @@
     customElements.define('my-avatar', Avatar);
     import {Bubble} from '/components/bubble/bubble.js';
     customElements.define('my-bubble', Bubble);
+    import {Banner} from '/components/banner/banner.js';
+    customElements.define('my-banner', Banner);
   </script>
 </html>
 
