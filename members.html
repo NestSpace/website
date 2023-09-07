@@ -8,26 +8,38 @@
     <body>
     <my-banner title="Members"></my-banner>
       <div style='height:100%; width: 80%; max-width: 1000px; margin: auto'>
-    <div class='left-button' onclick='
+    <button class='left-button' onclick='
         var elems = document.getElementsByClassName("animate-bubble-disappear");
          if (elems.length > 0) {
-            elems[elems.length - 1].className = "animate-bubble-appear"
+            var elm = elems[elems.length - 1];
+            var newone = elm.cloneNode(true);
+            newone.className = "animate-bubble-appear";
+            elm.parentNode.replaceChild(newone, elm);
          }
         var elems = document.getElementsByClassName("animate-avatar-disappear");
          if (elems.length > 0) {
-            elems[elems.length - 1].className = "animate-avatar-appear"
+            var elm = elems[elems.length - 1];
+            var newone = elm.cloneNode(true);
+            newone.className = "animate-avatar-appear";
+            elm.parentNode.replaceChild(newone, elm);
          }
-        '>&LeftAngleBracket;</div>
-    <div class='right-button' onclick='
+        '>&LeftAngleBracket;</button>
+    <button class='right-button' onclick='
          var elems = document.getElementsByClassName("animate-bubble-appear");
          if (elems.length > 1) {
-            elems[0].className = "animate-bubble-disappear"
+            var elm = elems[0];
+            var newone = elm.cloneNode(true);
+            newone.className = "animate-bubble-disappear";
+            elm.parentNode.replaceChild(newone, elm);
          }
          var elems = document.getElementsByClassName("animate-avatar-appear");
          if (elems.length > 1) {
-            elems[0].className = "animate-avatar-disappear"
+            var elm = elems[0];
+            var newone = elm.cloneNode(true);
+            newone.className = "animate-avatar-disappear";
+            elm.parentNode.replaceChild(newone, elm);
          }
-        '>&RightAngleBracket;</div>
+        '>&RightAngleBracket;</button>
       <div class='bubblescontainer' style='height:300px; width: 1000%'>
         <div class='animate-bubble-appear' style='height: 100%; width: 0%; float: left'>
         <my-bubble>
