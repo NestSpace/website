@@ -1,3 +1,78 @@
 body {
 	background: rgba(221,163,255,1);
+    margin: 0;
+    font-family: 'Atkinson Hyperlegible';
+    overflow-x: hidden;
+    width: 100%;
+}
+@keyframes avatardisappear {
+    from {
+        width: 100px;
+        opacity: 1;
+    }
+    to {
+        width: 0px;
+        opacity: 0;
+    }
+}
+@keyframes bubbledisappear {
+    from {
+        width: 10%;
+        opacity: 1;
+    }
+    to {
+        width: 0%;
+        opacity: 0;
+    }
+}
+.animate-avatar-disappear {
+    animation-name: avatardisappear;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-direction: normal;
+}
+.animate-avatar-appear {
+    animation-name: avatardisappear;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-direction: reverse;
+}
+.animate-bubble-disappear {
+    animation-name: bubbledisappear;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-direction: normal;
+}
+.animate-bubble-appear {
+    animation-name: bubbledisappear;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-direction: reverse;
+}
+button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+.left-button {
+    position: relative;
+    width: 10%;
+    height: 100px;
+    left: calc(-10% - 20px);
+    top: 300px;
+    font-size: 50px;
+    text-align: right;
+    z-index: 999;
+}
+.right-button {
+    position: relative;
+    width: 10%;
+    height: 100px;
+    left: calc(90% + 20px);
+    top: 300px;
+    font-size: 50px;
+    z-index: 999;
 }
